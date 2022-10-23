@@ -27,7 +27,6 @@
 
 <script>
 import AddButton from "./components/AddButton.vue";
-import Form from "./components/Form.vue";
 import List from "./components/List.vue";
 import Pagination from "./components/Pagination.vue";
 
@@ -35,7 +34,6 @@ export default {
   name: "App",
   components: {
     AddButton,
-    Form,
     List,
     Pagination,
   },

@@ -12,41 +12,6 @@
     </li>
     <ContextMenu></ContextMenu>
   </ul>
-
-  <!-- <table class="costs-list">
-    <thead>
-      <tr class="costs-list__title">
-        <th>#</th>
-        <th>Date</th>
-        <th>Category</th>
-        <th>Value</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr v-for="cost in list" :key="cost.id" class="costs-list__item">
-        <td>{{ cost.id }}</td>
-        <td>{{ cost.date }}</td>
-        <td>{{ cost.category }}</td>
-        <td>{{ cost.value }}</td> -->
-  <!-- <td>
-        <span 
-          :class="[record.typeClass]"
-          class="white-text badge"
-        >{{ record.typeText }}</span>
-      </td> -->
-  <!-- <td>
-        <button 
-          v-tooltip="'Посмотреть запись'"
-          class="btn-small btn" 
-          @click="$router.push('/detail/' + record.id)"
-        >
-          <i class="material-icons">open_in_new</i>
-        </button>
-      </td> -->
-  <!-- </tr>
-    </tbody>
-  </table> -->
 </template>
 
 <script>
@@ -61,7 +26,6 @@ export default {
   mounted() {
     this.$store.dispatch("loadCosts", +this.$route.query.page);
     this.$context.EventEmitter.$on("show", this.show);
-    // this.$context.EventEmitter.$on("hide", this.hide);
   
   },
 
@@ -72,7 +36,6 @@ export default {
   },
 
   methods: {
-    //costId = @click="callContextMenu(cost.id)
     callContextMenu(event, cost) {
       this.$context.show(event.currentTarget, cost); // event.currentTarget для определения текущего элемента, на котором сработал event
 

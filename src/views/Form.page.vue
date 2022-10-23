@@ -1,8 +1,6 @@
 <template>
   <div class="form">
-    <router-link :to="-1" replace
-      ><div @click="$router.go(-1)" class="closeModal"></div
-    ></router-link>
+    <div @click="$router.go(-1)" class="closeModal"></div>
     <input
       v-model="category"
       :class="{ error: !this.category }"
@@ -36,11 +34,9 @@
 <script>
 export default {
   name: "Form",
-  props: {
-    to: Number,
-  },
+
   data() {
-    // console.log(this.$route.params.category);
+    // console.log(this.$route);
     // console.log(this.$route.fullPath);
     // console.log(this.$route.name);
     return {
@@ -80,11 +76,11 @@ export default {
     }
   },
 
-  computed: {
-    isPopupActive() {
-      return this.$store.getters.getIsPopupActive;
-    },
-  },
+  // computed: {
+  //   isPopupActive() {
+  //     return this.$store.getters.getIsPopupActive;
+  //   },
+  // },
 };
 </script>
 
